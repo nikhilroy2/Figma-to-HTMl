@@ -13,7 +13,38 @@ body {
   align-items: center;
 }
 
+:root {
+  --primary-color: #0054FF;
+}
+:root .primary_text {
+  color: var(--primary-color);
+}
+
 .container {
   background: #FFFFFF;
   padding: 30px 30px 34px 30px;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  width: auto;
+  max-width: 454px;
+}
+.container > h1 {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #D8DEE7;
+}
+.container > .row .col-md-trig h2 {
+  margin-top: 20px;
+  color: #333333;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+.container > .row .col-md-trig p {
+  margin: 0;
+  padding: 0;
+  color: #8F8F8F;
+  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */
