@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  src="/static/js/jquery-3.4.1.min.js"></script>
+    <script src="popup.js"></script>
+    <title>My awesome extension</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .container{
+            width: 320px;
+            padding: 0px 35px;
+        }
+        .col-md-trig-mode {
+            padding: 0px 20px;
+        }
+        .col-md-trig-mode p {
+            margin-top: 0px !important;
+        }
+        .col-md-trig-mode h3 {
+            margin-bottom: 3px;
+        }
+        .col-md-trig-mode.setting {
+            display: flex;
+            justify-content: space-between;
+        }
+        .col-md.option.active {
+            border-bottom: 2px solid;
+        }
+        .content-openai{
+            display: none;
+        }
+        .col-md-trig-mode.content {
+            margin-top: 20px;
+        }
+        .col-md-trig-mode.content button {
+            color: #3c92f6;
+            border: 1px solid #3c92f6;
+            padding: 6px 50px;
+            border-radius: 5px;
+        }
+        .dtl{
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Options</h1>
+        <div class="row">
+            <div class="col-md-trig">
+                <h2>Trigger Mode</h2>
+            </div>
+            <div class="col-md-trig-mode">
+                <div class="col-md option1">
+                    <h3>Always</h3>
+                    <p><span><input type="radio" class="querysetting" name="querysetting" value="always" data-id="always"/></span>ChatGpt is Queried on every match</p>
+                </div>
+                <div class="col-md option2">
+                    <h3>Question Mark</h3>
+                    <p><input type="radio" class="querysetting default" name="querysetting"  value="mark"  data-id="mark"/>When your query end with a question mark(?)</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-trig">
+                <h2>AI Provider</h2>
+            </div>
+            <div class="col-md-trig-mode setting">
+                <div class="col-md option webapp active dtl">
+                    <h4>ChatGpt Webapp</h3>
+                </div>
+                <div class="col-md option openai dtl">
+                    <h4>OpenAI API</h3>
+                </div>
+            </div>
+            <div class="col-md-trig-mode content">
+                <div class="col-md content-webapp">
+                    <p>The API that powers ChatGPT webapp, free, but sometimes unstabel</p>
+                    <button class="chatsetting" data-id="webapp" class="dtl">Connect</button>
+                </div>
+                <div class="col-md content-openai">
+                    <p>The API that powers ChatGPT API</p>
+                    <button class="chatsetting" data-id="openai" class="dtl">Connect</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
